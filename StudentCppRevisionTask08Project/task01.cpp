@@ -25,5 +25,22 @@
  */
 
 int task01(int a, int b, int c, int d) {
-	return 0;
+
+
+	cout << a << b << c << d << endl;
+
+	if (a == b == c == d) {
+		return 4;
+	}
+	else if (a == b == c || a == b == d || a == c == d || b == c == d ) {
+		return 3;
+	}
+	else if (a!=b&&b!=c&&c!=d&&a!=d) {
+		return 0;
+	}
+	else {
+		return 2;
+	}
+
+
 }
