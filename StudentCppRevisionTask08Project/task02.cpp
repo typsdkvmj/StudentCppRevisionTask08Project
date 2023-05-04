@@ -2,7 +2,7 @@
 
 /*	Task 02. Arithmetic progression [арифметическая прогрессия]
  *
- *	Даны четыре целых числа. Определите, являются ли данные числа 
+ *	Даны четыре целых числа. Определите, являются ли данные числа
  *	(в указанном порядке) последовательными членами простейшей арифметической прогрессии и,
  *	если да, то какая именно задана арифметическая прогрессия: возрастающая, убывающая или монотонная.
  *
@@ -27,11 +27,31 @@
  *
  *	[ input 4]: 7 7 7 7
  *	[output 4]: Monotonic arithmetic progression.
- * 
+ *
  *	[ input 5]: 2 4 8 16
  *	[output 5]: No arithmetic progression.
  */
 
 string task02(int a, int b, int c, int d) {
-	return "?";
+
+
+
+	int d1 = b - a;
+	int d2 = c - b;
+	int d3 = d - c;
+
+	if (d1 != d2 || d1 != d3 || d2 != d3) {
+		return  "No arithmetic progression.";
+	}
+
+	string msg = "Ascending arithmetic progression.";
+
+	if (d1 == 0) {
+		msg = "Monotonic arithmetic progression.";
+	}
+	else if (d1 < 0) {
+		msg = "Descending arithmetic progression.";
+	}
+
+	return msg;
 }

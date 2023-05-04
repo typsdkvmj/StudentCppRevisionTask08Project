@@ -26,21 +26,18 @@
 
 int task01(int a, int b, int c, int d) {
 
-
-	cout << a << b << c << d << endl;
-
-	if (a == b == c == d) {
-		return 4;
+	int msg;
+	if (a == b && b == c &&  c == d) {
+	  msg=4;
 	}
-	else if (a == b == c || a == b == d || a == c == d || b == c == d ) {
-		return 3;
+	else if (a != b && b != c && c != d && a != d ) {
+	msg=0;
 	}
-	else if (a!=b&&b!=c&&c!=d&&a!=d) {
-		return 0;
+	else if (a == b&& b == c || a == b&&b == d || a == c &&c== d || b == c &&c== d) {
+		msg= 3;
 	}
 	else {
-		return 2;
+		msg= 2;
 	}
-
-
+	return  msg;
 }

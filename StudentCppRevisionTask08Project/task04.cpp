@@ -31,5 +31,10 @@
  */
 
 bool task04(int year) {
-	return false;
+
+
+	bool result = (year% 4 == 0 && year % 100 != 0) || year % 400 == 0 ? true : false;
+
+
+	return result;
 }
